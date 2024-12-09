@@ -7,7 +7,7 @@ const scene = new THREE.Scene();
 
 const camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 0.01, 100 ); 
 
-const texture = new THREE.TextureLoader().load( "./texture.jpg" );
+const texture = new THREE.TextureLoader().load( "/texture.jpg" );
 
 const material = new THREE.MeshBasicMaterial( { map: texture } );
 const geometry = new THREE.SphereGeometry(1, 32, 16);
@@ -22,7 +22,7 @@ scene.add( mesh );
 
 camera.position.z = 15;
 
-const path = 'public/background/';
+const path = './background/';
 const format = '.png';
 const urls = [
   path + 'px' + format, path + 'nx' + format,
